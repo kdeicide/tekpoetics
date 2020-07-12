@@ -1,1 +1,4 @@
-alert("aaaaa");
+new Vue({
+  el: "",
+  data: {},
+});
