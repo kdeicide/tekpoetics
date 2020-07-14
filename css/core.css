@@ -15,6 +15,9 @@ a {
 #mo_nav {
     background-color: rgb(250, 230, 56);
     min-height: 200px;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
 }
 #mo_nav ul {
     grid-column: 10/13;
@@ -43,13 +46,21 @@ li:hover a {
 }
 .main_right_1{
     grid-column: 12/13;
+    /* border: 1px solid red; */
     
+}
+.main_right_1 a {
+    margin-left: 2.5em;
 }
 .main_right_1 a i {
     color: rgb(250, 230, 56);
-    position: relative;
+    text-shadow: 2px 2px 5px black;
+    position: sticky;
+    top: 220px;
+    margin: auto;
+    /* position: relative;
     left: 2em;
-    top: 1em;
+    top: 1em; */
     
 }
 .main_right_1 a:hover  i{
