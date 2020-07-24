@@ -47,8 +47,9 @@ a {
     position: relative;
     top: 3px;
     font-weight: bolder;
-    border-radius: 1mm;
-    box-shadow: 0px 1px 1px rgb(224, 160, 20);
+    border-radius: 0.5mm;
+    box-shadow: 0px 1px 0px rgb(150, 137, 19);
+    padding: 3px;
 }
 #mo_nav {
     background-color: var(--yellow-color);
@@ -82,7 +83,7 @@ li:hover a {
     text-shadow: 2px 2px 5px rgba(13, 49, 13, 0.651);
 }
 .background-text {
-    background-image: url("../images/PHOTO-2020-07-13-19-02-18.jpg");
+    background-image: url("PHOTO-2020-07-13-19-02-18.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
