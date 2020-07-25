@@ -42,6 +42,15 @@ a {
     text-decoration: none;
     color: #000;
 }
+.mo_selected {
+    color: rgba(56, 58, 55, 0.781);
+    position: relative;
+    top: 3px;
+    font-weight: bolder;
+    border-radius: 0.5mm;
+    box-shadow: 0px 1px 0px rgb(150, 137, 19);
+    padding: 3px;
+}
 #mo_nav {
     background-color: var(--yellow-color);
     min-height: 200px;
@@ -51,7 +60,7 @@ a {
     opacity: .9;
 }
 #mo_nav:hover {
-    opacity: 1;
+    opacity: .9;
 }
 #mo_nav ul {
     grid-column: 9/13;
@@ -59,7 +68,7 @@ a {
     justify-self: end;
     margin-top: 30px;
     margin-right: 1.5em;
-    padding-left: 1em;;
+    padding-left: 1em;
     
 }
 #mo_nav ul li {
@@ -74,7 +83,7 @@ li:hover a {
     text-shadow: 2px 2px 5px rgba(13, 49, 13, 0.651);
 }
 .background-text {
-    background-image: url("../images/PHOTO-2020-07-13-19-02-18.jpg");
+    background-image: url("PHOTO-2020-07-13-19-02-18.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -165,11 +174,17 @@ footer a {
         grid-column: 2/12;
     }
     .background-text {
-        min-height: 350px;
-        padding-top: 200px;
+        min-height: 340px;
+        padding-top: 180px;
     }
     #mo_nav {
         min-height: 140px;
+    }
+}
+@media only screen and (max-width: 768px){
+    #mo_nav ul li {
+        display: inline;
+        margin-left: .5em;
     }
 }
 @media only screen and (max-width: 747px) {
@@ -180,7 +195,7 @@ footer a {
         position: sticky;
         top:0;
         opacity: .9;
-        /* width: 100%; */
+        z-index: 1;
     }
     #mo_navicon a {
         justify-self: end;
@@ -190,7 +205,7 @@ footer a {
     #mo_nav {
         display: none;
     }
-    .main_right_1 a:hover  i{
+    .main_right_1 a i:hover  {
         animation: none;
           
     }
@@ -199,7 +214,7 @@ footer a {
         grid-row: 1;
         justify-self: end;
         padding-top: 20px;
-        z-index: -1;
+        z-index: 0;
     }
     #social_media {
         grid-row: 1;
@@ -230,6 +245,18 @@ footer a {
     .background-text {
         min-height: 250px;
         padding-top: 150px;
+    }
+}
+@media only screen and (width: 375px) and (height: 812px){
+    .background-text {
+        min-height: 350px;
+        padding-top: 200px;
+    }
+}
+@media only screen and (width: 320px) and (height: 568px){
+    .background-text {
+        min-height: 220px;
+        padding-top: 100px;
     }
 }
   
