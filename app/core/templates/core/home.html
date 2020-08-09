@@ -1,13 +1,36 @@
 {% extends "core/default.html" %}
+{% load static %}
+
 
 
 {% block maincontent %}
+{% comment %} <main class="mo_grid_12"> {% endcomment %}
+    <div class="background-text"></div>
+    {% comment %} <div class="main_right_1">
+        <div class="mail_and_user">
+            <div id="main_mail"  >
+                <a href="mailto:tekpoetics@gmail.com">
+                    <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="auth_knob">
+                <img src="{% static 'core/auth_knob.png' %}" alt="">
+            </div>
+        </div> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
+{% comment %} </main> {% endcomment %}
+{% endblock maincontent %}
+
+{% comment %} {% block maincontent %}
 <main class="mo_grid_12">
     <div class="background-text"></div>
     <div id="main_mail" class="main_right_1" >
         <a href="mailto:tekpoetics@gmail.com">
             <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
         </a>
+        <div class="auth_knob">
+            <img src="{% static 'core/auth_knob.png' %}" alt="">
+        </div>
     </div>
 </main>
-{% endblock maincontent %}
+{% endblock maincontent %} {% endcomment %}

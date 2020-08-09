@@ -15,26 +15,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="mo_nav" class="mo_grid_12" >
+    <nav id="nav" class="grid_12" >
+        
         <ul> 
-            <li><a href="{% url 'home' %}" class="{% if title == 'Home' %} mo_selected {% endif %}">Home</a></li>
-            <li><a href="{% url 'releases' %}" class="{% if title == 'Releases' %} mo_selected {% endif %}">Releases</a></li>
-            <li><a href="#" class="{% if title == 'Artists' %} mo_selected {% endif %}">Artists</a></li>
-            <li><a href="#" class="{% if title == 'Events' %} mo_selected {% endif %}">Events</a></li>
-            <li><a href="#" class="{% if title == 'Contact Us' %} mo_selected {% endif %}">Contact Us</a></li>
+            <li><a href="{% url 'home' %}" class="{% if title == 'Home' %} selected {% endif %}">Home</a></li>
+            <li><a href="{% url 'releases' %}" class="{% if title == 'Releases' %} selected {% endif %}">Releases</a></li>
+            <li><a href="#" class="{% if title == 'Artists' %} selected {% endif %}">Artists</a></li>
+            <li><a href="#" class="{% if title == 'Events' %} selected {% endif %}">Events</a></li>
+            <li><a href="#" class="{% if title == 'Contact Us' %} selected {% endif %}">Contact Us</a></li>
         </ul>
     </nav>
-    <nav id="mo_navicon" class="mo_grid_12"><a href="#"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></nav>
+    <nav id="navicon" class="grid_12"><a href="#"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></nav>
 {% comment %} ######################################################## {% endcomment %}
 
-    {% block maincontent %}
+    <main class="grid_12">
+        {% block maincontent %}
 
-    {% endblock maincontent %}
+        {% endblock maincontent %}
+        
+        <div class="main_right_1">
+            <div class="mail_and_user">
+                <div id="main_mail"  >
+                    <a href="mailto:tekpoetics@gmail.com">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <label class="auth_link login_link" for="login_l">Login</label>
+                <input type="radio" name="auth" id="login_l" >
+                
+                <label class="auth_link logout_link" for="logout_l">Logout</label>
+                <input type="radio" name="auth" id="logout_l">
+                <div class="auth_go">
+                    <a style="width:100%" href="#"><img style="width: 100%;" src="{% static 'core/auth_botton_1.png' %}" alt="go to login page"></a>
+                </div>
+                <div class="auth_knob">
+                    <img src="{% static 'core/auth_knob.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    
 
 {% comment %} ######################################################## {% endcomment %}
 
-    <footer id="mo_main_footer" class="mo_grid_12">
-        <div id="social_media" class="mo_grid_l3_1">
+    <footer id="main_footer" class="grid_12">
+        <div id="social_media" class="grid_l3_1">
             <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-spotify fa-2x" aria-hidden="true"></i></a>
@@ -45,7 +70,7 @@
 
             
         </div>
-        <div id="mo_footer_about" class="mo_grid_l4_2">
+        <div id="footer_about" class="grid_l4_2">
             <h1>TEKPOETICS</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed vero veniam deleniti doloribus laudantium, autem deserunt ea, laboriosam accusantium nostrum quod? Quo minus officia optio reiciendis dicta ullam voluptatem magni tenetur, nisi neque. Dignissimos magni, asperiores iusto commodi esse explicabo quia, vel voluptas nobis alias facere atque corrupti cupiditate dolorem voluptate aliquid laudantium? Soluta minus exercitationem at ab nemo ullam corporis nam tenetur, inventore expedita a fuga perferendis voluptatibus sapiente illo alias natus repellendus cupiditate cumque eaque eligendi suscipit? Reprehenderit harum quasi illo tempore qui. Consequatur tempore ratione eos aut autem nulla libero, dolor necessitatibus, laudantium quam maiores voluptates omnis.</p>
         </div>

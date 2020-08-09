@@ -21,7 +21,7 @@ class ModelTests(TestCase):
         self.assertEqual(user.email, self.email)
         self.assertTrue(user.check_password(self.password))
 
-    def test_email_ormalizes(self):
+    def test_email_normalizes(self):
         '''test the email address for new user is normalized!'''
         user = get_user_model().objects.create_user(
             email="test@TekpoetICS.COM",
@@ -44,16 +44,16 @@ class ModelTests(TestCase):
                 password=self.password
                 )
 
-    def test_create_super_user(self):
+    def test_create_superuser(self):
 
-        user1 = get_user_model().objects.create_super_user(
+        user1 = get_user_model().objects.create_superuser(
             email=self.email,
             name=self.name,
             password=self.password
         )
 
         '''create superuser without providing name!'''
-        user2 = get_user_model().objects.create_super_user(
+        user2 = get_user_model().objects.create_superuser(
             email='testuser2@tekpoetics.com',
             password=self.password
         )
