@@ -54,10 +54,7 @@ a {
     position: -webkit-sticky;
     position: sticky;
     top:0;
-    opacity: .9;
-}
-#nav:hover {
-    opacity: .9;
+    z-index: 1;
 }
 #nav ul {
     grid-column: 9/13;
@@ -79,7 +76,6 @@ li:hover a {
     text-shadow: 2px 2px 5px rgba(13, 49, 13, 0.651);
 }
 .background-text {
-    /* background-image: url("PHOTO-2020-07-13-19-02-18.jpg"); */
     background-image: url("logo_background_orange.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -200,14 +196,15 @@ footer a {
 }
 @keyframes mo {
     0% {
-      transform: translateY(-0.1em);
+      transform: rotateY(0deg);
     }
     50% {
-        transform: translateY(-2.5em);
-        color: black;
+        transform: rotateY(180deg);
+        color: rgb(106, 107, 105);
     }
+    
     100% {
-        transform: translateY(0);
+        transform: rotateY(360deg);
     }
   }
 
