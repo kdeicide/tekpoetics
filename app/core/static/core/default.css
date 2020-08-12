@@ -1,12 +1,13 @@
 @charset "UTF-8";
 :root {
-    --yellow-color: rgb(250, 230,56);
+    --yellow-color: #f7931e;
+    --black-collor: #111111;
 }
 body {
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
-    background-color: black;
+    background-color: var(--black-collor);
 }
 .grid_12 {
     display: grid;
@@ -78,12 +79,14 @@ li:hover a {
     text-shadow: 2px 2px 5px rgba(13, 49, 13, 0.651);
 }
 .background-text {
-    background-image: url("PHOTO-2020-07-13-19-02-18.jpg");
+    /* background-image: url("PHOTO-2020-07-13-19-02-18.jpg"); */
+    background-image: url("logo_background_orange.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
     min-height: 650px;
     grid-column: 3/11;
+    margin-bottom: 10px;
 }
 /* ################################################################################# */
 /* ################################### MAIL AND LOGIN/LOGOUT ####################### */
@@ -121,7 +124,7 @@ input[id="go"]:checked ~ .auth_knob{
 }
 .main_right_1 a i {
     color: var(--yellow-color);
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px var(-);
     position: sticky;
     top: 220px;
     margin: auto;
