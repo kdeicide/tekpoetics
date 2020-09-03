@@ -1,0 +1,5 @@
+#release_section {
+    color: rgb(250, 230,56);
+    
+    grid-column: 3 / span 8;
+}
